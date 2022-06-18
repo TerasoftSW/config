@@ -1,6 +1,9 @@
 server:
   port: 8888
+
 spring:
+  application:
+    name: config-server
   cloud:
     config:
       server:
@@ -8,6 +11,6 @@ spring:
           uri: https://github.com/TerasoftSW/config-data.git
           username: ${TERASOFT_GIT_USER}
           password: ${TERASOFT_GIT_TOKEN}
-          default-label: "main"
-          searchPaths: servicesbc-service, userprofile-service
+          default-label: main
+          searchPaths: servicesbc-service, userprofile-service, subscription-service
           cloneOnStart: true
